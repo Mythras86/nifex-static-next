@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import LoremIpsum from "../components/loremIpsum";
 
 export const metadata: Metadata = {
   title: 'Gépeink',
@@ -8,6 +9,6 @@ export const metadata: Metadata = {
 
 export default function Gepeink() {
     return(
-        <div>gepeink</div>
+        <LoremIpsum fejlec={"Gépeink"} />
     );
 }
