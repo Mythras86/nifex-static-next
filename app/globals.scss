@@ -1,3 +1,5 @@
+@use './partials/mixins' as m;
+
 * {box-sizing: border-box; padding: 0; margin: 0;font-family:Arial, Helvetica, sans-serif}
 
 *, *:before, *:after {
@@ -10,7 +12,7 @@
 
 html {
   box-sizing: border-box;
-  background-color: gray;
+  background-color: lightblue;
 }
 
 body {
@@ -28,6 +30,12 @@ main {
   align-content: flex-start;
 }
 
+.flexRow {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .flexRowNowrap {
   width: 100%;
   display: flex;
@@ -36,6 +44,10 @@ main {
 
 .flex1 {
   flex: 1;
+}
+
+.w100 {
+  width: 100%;
 }
 
 .bgDarkBlue {
@@ -52,13 +64,13 @@ main {
 
 h1 {
   text-align: center;
-  padding: 2rem;
+  padding-bottom: 2rem;
 }
 
 .szovegTorzs {
   background-color: lightblue;
   color: black;
-  padding: 0 3rem;
+  padding: 2rem 3rem;
 }
 
 .selected {

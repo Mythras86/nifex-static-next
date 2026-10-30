@@ -1,3 +1,5 @@
+@use '../../partials/mixins' as m;
+
 .mainHeader {
     width: 100%;
     max-width: 100%;
@@ -6,31 +8,32 @@
     z-index: 1;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-end;
-    padding: 0 5rem;    
+    justify-content: center;
+    align-items: center;
     background-color: darkblue;
-}
-
-nav {
-    height: 100%;
+    padding: 0;
+    @include m.tablet-landscape {
+        padding: 0 1rem;
+    }
 }
 
 ul {
-    height: 100%;
     list-style: none;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 .navList {
-    flex: 1;
-    display: flex;
+    flex: 0 0 100%;
+    @include m.tablet-landscape {
+        display: flex;
+        flex: 1;
+    }
+
 }
 
 .navLink {
     display: block;
-    width: 100%;
-    height: 100%;
     padding: 1rem;
     text-decoration: none;
     text-align: center;
@@ -39,9 +42,44 @@ ul {
     color: whitesmoke;
 }
 
-.logo {
-    font-size: 5rem;
+.logo, .burger, .bezaras {
+    font-size: 4rem;
     background-color: darkblue;
     color: lightblue;
     padding: 1rem 2rem;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-content: center;
+}
+
+.burger {
+    font-size: 4rem;
+    background-color: darkblue;
+    color: lightblue;
+    padding: 1rem 2rem;
+    display: flex;
+    align-content: center;
+    @include m.tablet-landscape {
+        display: none;
+    }
+}
+
+.navCont {
+    display: none;
+    @include m.tablet-landscape {
+        display: block;
+    }
+}
+
+.burgerNavCont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: darkblue;
+    width: 100vw;
+    height: 100vh;
 }

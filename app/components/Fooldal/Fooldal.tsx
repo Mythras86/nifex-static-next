@@ -7,12 +7,12 @@ export default function Fooldal() {
     return(
         <main>
             <div className='mainImgCont'>
-                <Image className='mainImg' src={mainImage} alt={'Kezdőkép'} objectFit={'cover'}></Image>
+                <Image className='mainImg' src={mainImage} alt={'Kezdőkép'}></Image>
             </div>
-            <div className='flexRowNowrap'>
-                <div className='flex1 topics bgDarkBlue'>Lemezburkolatok, panelek gyártása</div>
-                <div className='flex1 topics bgBlue'>Információs táblák és pultok gyártása</div>
-                <div className='flex1 topics bgLightBlue'>Alumínium és acél termékek gyártása</div>
+            <div className='flexRow w100'>
+                <div className='topics bgDarkBlue'>Lemezburkolatok, panelek gyártása</div>
+                <div className='topics bgBlue'>Információs táblák és pultok gyártása</div>
+                <div className='topics bgLightBlue'>Alumínium és acél termékek gyártása</div>
             </div>
             <LoremIpsum fejlec={'Főoldal'} />
         </main>
