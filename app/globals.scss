@@ -1,0 +1,78 @@
+* {box-sizing: border-box; padding: 0; margin: 0;font-family:Arial, Helvetica, sans-serif}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// * {
+//   border: 1px greenyellow solid;
+// }
+
+html {
+  box-sizing: border-box;
+  background-color: gray;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.flexRowNowrap {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.bgDarkBlue {
+  background-color: darkblue;
+}
+
+.bgBlue {
+  background-color: blue;
+}
+
+.bgLightBlue {
+  background-color:rgb(75, 75, 255);
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+}
+
+.szovegTorzs {
+  background-color: lightblue;
+  color: black;
+  padding: 0 3rem;
+}
+
+.selected {
+    background-color: lightblue;
+    color: darkblue;
+    user-select: none;
+    cursor: pointer;
+}
+
+.selectable {
+  &:hover {
+    background-color: lightblue;
+    color: darkblue;
+    user-select: none;
+    cursor: pointer;
+  }
+}
